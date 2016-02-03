@@ -1,0 +1,12 @@
+http://itsyouonline.aydo.com:1010 {
+    bind 0.0.0.0
+    gzip
+    root www.itsyouonline.com/en
+    git {
+       repo git@github.com:itsyouonline/website.git
+       interval 300
+       key ../keys/id_rsa
+       path ../..
+       then ./hugo-init
+    }
+}

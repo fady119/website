@@ -1,0 +1,53 @@
+
+{{ range $element :=  $.Site.Pages }}
+  {{ if eq .Section "home" }}
+      {{ if eq .Title "footer_box" }}
+      <footer id="footer">
+        <div class="container">
+
+          <div class="row">
+
+            <!-- col #1 -->
+            <div class="logo_footer col-md-8">
+
+             <br>
+
+              <p class="block">
+                <strong><em>{{.Params.summary_bold}}</em></strong> 
+                {{.Params.summary}}
+                <a href="{{.Params.summary_link}}">{{.Params.summary_link_text}} <i class="fa fa-arrow-right"></i></a>
+              </p>
+              <h2>{{.Params.phone_number}}</h2>
+            </div>
+            <!-- /col #1 -->
+
+            <!-- col #2 -->
+            <div class="spaced col-md-4">
+              <h4>{{.Params.summary2_bold}}</h4>
+              <p>
+                {{.Params.summary2}}
+              </p>
+
+              <h4><small><strong>{{.Params.email}}</strong></small></h4>
+              
+
+            </div>
+            <!-- /col #2 -->
+
+          </div>
+
+        </div>
+
+        <hr />
+
+        <div class="copyright">
+          <div class="container text-center fsize12">
+            {{.Params.copy_right}} 
+            
+          </div>
+        </div>
+      </footer>
+          {{end}}
+        {{end}}
+      {{end}}
+      <!-- /FOOTER -->

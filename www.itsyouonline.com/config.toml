@@ -1,0 +1,11 @@
+baseurl = "/"
+LanguageCode = "en"
+title = "It's you online"
+theme = "landing"
+contentdir = "content"
+staticdir = "static"
+publishdir = "en"
+relativeURLs = true
+
+[permalinks]
+    post = "/:filename"

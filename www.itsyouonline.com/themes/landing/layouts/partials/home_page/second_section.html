@@ -1,0 +1,53 @@
+
+			<section id="whatWeDo" class="alternate">
+				<div class="container">
+			{{ range $element :=  .Data.Pages }}
+                {{ if eq .Section "home" }}
+                    {{ if eq .Title "second_section" }}
+					<header class="text-center">
+						<h2>{{ .Params.header }}</h2>
+						<p class="lead">{{ .Params.summary }}</p>
+						<div class="divider half-margins onepage center">
+						</div>
+					</header>
+					<div class="row">
+						<div class="col-md-6 col-sm-6"><!-- left image -->
+							<!-- add class "controlls-over" if you need the button controlls over the image -->
+							<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "autoHeight": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'><!-- transitionStyle: fade, backSlide, goDown, fadeUp,  -->
+								<div>
+									<img alt="" class="img-responsive" src="{{ .Params.small_slider1 }}">
+								</div>
+								<div>
+									<img alt="" class="img-responsive" src="{{ .Params.small_slider2 }}">
+								</div>
+								<div>
+									<img alt="" class="img-responsive" src="{{ .Params.small_slider3 }}">
+								</div>
+							</div>
+						</div><!-- /left image -->
+
+						<div class="col-md-6 col-sm-6">
+							<h3><strong>{{ .Params.text_bold }} </strong> {{ .Params.text_not_bold }}</h3>
+							<ul class="list-icon spaced check-circle">
+								<li>{{.Params.li_1}}</li>
+								<li>{{.Params.li_2}}</li>
+								<li>{{.Params.li_3}}</li>
+								<li>{{.Params.li_4}}</li>
+								<li>{{.Params.li_5}}</li>
+								<li>{{.Params.li_6}}</li>
+							</ul>
+
+							<div class="margin-top20"><!-- buttons -->
+								<a href="{{ .Params.link_button1 }}" target="_blank" rel="nofollow" class="btn btn-primary">{{ .Params.button1 }}</a>
+								<a href="{{ .Params.link_button1 }}" class="btn btn-default">{{ .Params.button2 }}</a>
+							</div><!-- /buttons -->
+
+						</div>
+						{{end}}
+						{{end}}
+						{{end}}
+					</div>
+
+				</div>
+			</section>
+			<!-- /SECTION -->

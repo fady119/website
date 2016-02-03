@@ -1,0 +1,48 @@
+
+			<section id="product">
+				<div class="container">
+				{{ range $element :=  .Data.Pages }}
+	                {{ if eq .Section "home" }}
+	                    {{ if eq .Title "product" }}
+					<header class="text-center">
+						<h2>{{ .Params.header }}</h2>
+						<p class="lead">{{ .Params.summary }}</p>
+						<div class="divider half-margins onepage center">						
+						</div>
+					</header>
+
+
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="featured-box noborder">							
+
+								<i class="fa fa-university"></i>
+								<h4>{{ .Params.block1_title_strong }}</h4>
+								<p>{{ .Params.block1_text }}</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="featured-box noborder">							
+
+								<i class="fa fa-anchor"></i>
+								<h4>{{ .Params.block2_title_strong }}</h4>
+								<p>{{ .Params.block2_text }}</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="featured-box noborder">						
+
+								<i class="fa fa-book"></i>
+								<h4>{{ .Params.block2_title_strong }}</h4>
+								<p>{{ .Params.block2_text }}</p>
+							</div>
+						</div>						
+					</div>
+
+
+							{{end}}
+						{{end}}
+					{{end}}
+				</div>
+			</section>			
